@@ -9,7 +9,7 @@ import time
 
 load_dotenv()
 
-token = "MTA0MDc1NDEyMjQzNTA4ODQ3NA.GgW1bv.IP6YolipbFolvfu7U28ZQnaTk_fItk-vT9Ptwg"
+token = os.getenv('TOKEN')
 
 intents = discord.Intents.all()
 bing = commands.Bot(command_prefix='o!', intents=intents)
