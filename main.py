@@ -6,6 +6,7 @@ from discord.ext.commands import cooldown, BucketType
 from discord.ui import Button, View
 import os
 import time
+import keep_alive
 
 load_dotenv()
 
@@ -29,4 +30,5 @@ async def verify(ctx, name:Option(str, "Minecraft IGN", required=True)):
     embed.add_field(name=f"Error: Invalid name '{name}'", value="Something went wrong. Please verify with the following")
     await ctx.respond(embed=embed, view=view)
 
+keep_alive.keep_alive()
 bing.run(token)
